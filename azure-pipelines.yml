@@ -29,6 +29,4 @@ stages:
           $(tag)
     
     - script: |
-        docker ps
-        pwd
-        ls
+        docker images
