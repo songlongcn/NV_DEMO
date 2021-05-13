@@ -25,6 +25,7 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        repository: 'songlongtj/nv_demo'
         tags: |
           $(tag)
     
