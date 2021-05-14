@@ -38,7 +38,7 @@ stages:
     - task: NeuVectorScan@2
       inputs:
         scanType: 'standalone'
-        license: '$(nvlicense. secureFilePath)'
+        license: '$(nvlicense.secureFilePath)'
         nvContainerRegistry: 'lsong docker hub'
         nvRepository: 'songlongtj/scanner'
         nvTag: '2.0'
