@@ -44,6 +44,9 @@ stages:
         nvTag: '2.0'
         repository: 'songlongtj/nv_demo'
         tag: '$(Build.BuildId)'
+    - script: |
+        docker tag songlongtj/nv_demo:$(Build.BuildId) registry.hub.docker.com/songlongtj/nv_demo:$(Build.BuildId)
+        docker images
     - task: Docker@2
       displayName: push a scanned image to a registry
       inputs:
