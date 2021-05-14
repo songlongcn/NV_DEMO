@@ -20,6 +20,10 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    - task: DownloadSecureFile@1
+      name: nvlicense
+      inputs:
+        secureFile: 'neuvector-license.txt'
     - task: Docker@2
       displayName: Build an image
       inputs:
@@ -31,4 +35,12 @@ stages:
     
     - script: |
         docker images
-    
+    - task: NeuVectorScan@2
+      inputs:
+        scanType: 'standalone'
+        license: '$(nvlicense. secureFilePath)'
+        nvContainerRegistry: 'lsong docker hub'
+        nvRepository: 'songlongtj/scanner'
+        nvTag: '2.0'
+        repository: 'songlongtj/nv_demo'
+        tag: '$(Build.BuildId)'
