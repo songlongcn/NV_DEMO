@@ -20,6 +20,13 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    - task: NeuVectorScan@2
+      inputs:
+        scanType: 'external'
+        neuvectorScanner: 'nv-gke'
+        containerRegistry: 'lsong docker hub'
+        repository: 'songlongtj/alpine'
+        tag: '3.6'
     - task: DownloadSecureFile@1
       name: nvlicense
       inputs:
