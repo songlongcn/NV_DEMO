@@ -19,7 +19,7 @@ stages:
     displayName: Build
     pool:
       vmImage: ubuntu-latest
-    # steps:
+    steps:
     # - task: NeuVectorScan@2
     #   inputs:
     #     scanType: 'external'
