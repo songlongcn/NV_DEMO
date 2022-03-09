@@ -23,7 +23,7 @@ stages:
     # - task: NeuVectorScan@2
     #   inputs:
     #     scanType: 'external'
-    #     neuvectorScanner: 'nv-gke'
+    #     neuvectorScanner: 'nv-external-scanner'
     #     containerRegistry: 'lsong docker hub'
     #     repository: 'songlongtj/alpine'
     #     tag: '3.6'
